@@ -35,7 +35,7 @@ while ($result = mysqli_fetch_assoc($sql)) {
     <button style='width:25x;height:25px' name='like' type='submit'value='{$result['id']}'> 👍 {$result['likes']}</button>
     <button style='width:25x;height:25px' name='dislike' type='submit' value='{$result['id']}'> 👎 {$result['dislikes']}</button></form></h2>
     <form action='comment.php' method'GET'>
-    <input name='comment' type='text' placeholder='Ваш коммент'><button name='com' type='submit' value='{$result['id']}'> Комм </button></form>";
+    <input name='comment' type='text' placeholder='Ваш коммент'><button name='com' type='submit' value='{$result['id']}'> Комментировать </button></form>";
     foreach($sql2 as $result2){
         if($result2['post_id'] == $result['id']){
             print "<span id='dots' style='display:none'></span><span style='display: inline' id='more'>{$result2['mess']}: {$result2['time']}</div><br></span>";
